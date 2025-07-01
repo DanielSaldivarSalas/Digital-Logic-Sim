@@ -232,6 +232,14 @@ namespace DLS.Game
 			{
 				CancelEverything();
 			}
+
+			if (KeyboardShortcuts.PlaceInputGateShortcutTriggered)
+			{
+				if (!IsPlacingOrMovingElementOrCreatingWire)
+				{
+					StartPlacing("IN-1");
+				}
+			}
 		}
 
 		void HandleMouseInput()
